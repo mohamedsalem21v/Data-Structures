@@ -68,9 +68,3 @@ g++ -std=c++17 stack_implementation.cpp -o stack
 - No destructor implemented; remaining nodes are not freed automatically if the program ended earlier—safe for short-lived programs, but you can add one for completeness.
 - `peek()` assumes the stack is not empty; add a guard or exception if desired.
 - Uses dynamic allocation per pushed element.
-
-## Possible Improvements
-- Add `size()` member (maintain a counter) for O(1) length.
-- Implement destructor / copy / move semantics (Rule of Three/Five).
-- Add an exception or error handling for `peek()` / `pop()` on empty stack.
-- Provide an iterator (mostly unnecessary for a stack, but educational).
