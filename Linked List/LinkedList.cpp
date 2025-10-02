@@ -143,6 +143,21 @@ public:
             delete delptr;
         }
     }
+
+    void reverse()
+    {
+        Node<T> *prev = nullptr;
+        Node<T> *current = head;
+        Node<T> *next = current->next;
+        while (next != nullptr)
+        {
+            next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
 };
 
 int main()
@@ -151,3 +166,4 @@ int main()
     return 0;
 
 }
+
