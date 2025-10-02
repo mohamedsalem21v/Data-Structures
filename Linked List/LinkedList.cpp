@@ -24,10 +24,12 @@ public:
     {
         head = nullptr;
     }
+
     bool empty()
     {
         return (head == nullptr);
     }
+
     void InsertFirst(int value)
     {
         Node<T> *newnode = new Node<T>();
@@ -43,6 +45,7 @@ public:
             head = newnode;
         }
     }
+
     void display()
     {
         Node<T> *temp = head;
@@ -52,6 +55,7 @@ public:
             temp = temp->next;
         }
     }
+
     int count()
     {
         Node<T> *temp = head;
@@ -63,6 +67,7 @@ public:
         }
         return cnt;
     }
+
     bool found(T key)
     {
         Node<T> *temp = head;
@@ -74,6 +79,7 @@ public:
         }
         return false;
     }
+
     void append(T value)
     {
         Node<T> *newnode = new Node<T>();
@@ -91,6 +97,7 @@ public:
             newnode->next = nullptr;
         }
     }
+
     void InsertBefore(T newvalue, T item)
     {
         Node<T> *newnode = new Node<T>();
@@ -142,4 +149,5 @@ int main()
 {
     Linkedlist<int> ls;
     return 0;
+
 }
