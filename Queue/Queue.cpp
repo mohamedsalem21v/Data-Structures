@@ -83,6 +83,20 @@ public:
             rear = nullptr;
     }
 
+    int frontValue()
+    {
+        if (empty())
+            return -1;
+        return front->data;
+    }
+
+    int backValue()
+    {
+        if (empty())
+            return -1;
+        return rear->data;
+    }
+
     void display()
     {
         Node *temp = front;
@@ -100,6 +114,9 @@ int main()
     MyQueue q;
     q.EnQueue(10);
     q.EnQueue(20);
+    q.EnQueue(30);
+    cout << "Front element: " << q.frontValue() << endl;
+    cout << "Back element: " << q.backValue() << endl;
     q.display();
     q.DeQueue();
     q.display();
